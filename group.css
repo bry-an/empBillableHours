@@ -1,0 +1,17 @@
+body {
+    background-color: lightseagreen;
+ }
+ 
+ #jumbotronMain {
+    background-color: orange;
+    color: black;
+ }
+ 
+ #box {
+   outline: 5px solid orange;
+ 
+ }
+ 
+ #boxTwo {
+    outline: 5px solid orange;
+ }

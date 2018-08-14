@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Employee Billable Hours</title>
+       <!-- SCRIPTS AND CSS BELOW: -->
+        <!-- RESET, THEN BOOTSTRAP, THEN STYLE, THEN FIREBASE, THEN AJAX, THEN MATERIALIZE, THEN JAVASCRIPT.-->
+         <!-- RESET CSS: -->
+         <link rel="stylesheet" type="text/css" media="screen" href="reset.css"/>
+        <!-- BOOTSTRAP: -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- PERSONAL CSS: -->
+        <link rel="stylesheet" type="text/css" media="screen" href="group.css"/>
+        <!-- FIREBASE LINK: -->
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <!-- AJAX LINK: -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- MATERALIZE LINK: -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <!-- JAVASCRIPT TO PAGE: -->
+        <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+<!-- Jumbotron -->
+<div class="jumbotron" id="jumbotronMain">
+        <h1 class="text-center">Employees</h1>
+        <h3 class="text-center">A Comprehensive Directory of Employee Billable Hours</h3>
+      </div>
+ <!-- Add Employee  -->
+ <div class="container">
+<div id="box">
+ <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Add Employee</strong></h3>
+        </div>
+     </div> <!-- Div end for primary panel under main box.-->
+     <!-- Entry Form -->
+     <form>
+            <div class="form-group">
+              <label for="employee-name-input">Employee Name</label>
+              <input class="form-control" id="name-input" type="text">
+            </div>
+            <div class="form-group">
+              <label for="role-input">Role</label>
+              <input class="form-control" id="role-input" type="text">
+            </div>
+            <div class="form-group">
+              <label for="start-input">Start Date (MM/DD/YYYY</label>
+              <input class="form-control" id="start-input" type="text">
+            </div>
+            <div class="form-group">
+              <label for="months-input">Months Worked</label>
+              <input class="form-control" id="months-input" type="text">
+            </div>
+            <div class="form-group">
+                    <label for="rate-input">Monthly Rate</label>
+                    <input class="form-control" id="rate-input" type="text">
+                  </div>
+                  <div class="form-group">
+                        <label for="billed-input">Total Billed</label>
+                        <input class="form-control" id="billed-input" type="text">
+                      </div>
+            <button class="btn btn-primary" id="add-employee-record" type="submit">Submit</button>
+          </form>
+        </div>
+    </div>
+    <hr>
+          <!-- Current Employees Table -->
+          <div class="container">
+              <div class="table">
+          <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><strong>Current Employees</strong></h3>
+                </div>
+                  </div> <!-- Div class PANEL PANEL PRIMARY END-->
+                 <table>
+                    <tr> <!-- Main Row FILL WITH ID'S -->
+                        <th> Employee Name </th>
+                        <th> Role </th>
+                        <th> Start Date </th>
+                        <th> Months Worked </th>
+                        <th> Monthy Rate ($) </th>
+                        <th> Total Billed ($) </th>
+                    </tr>
+                </table>
+                <table id = "table-data">
+                    </table>
+                </div> <!-- TABLE FORMATTING -->
+            </div>  <!-- Div class table end-->
+            </div>  <!-- Div class container end-->
+     
+</body>
+</html>
