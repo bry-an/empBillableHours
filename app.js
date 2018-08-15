@@ -33,7 +33,7 @@ $(document).ready(function () {
         var name = $("#name-input").val().trim();
         var role = $("#role-input").val().trim();
         var startDate = $("#start-input").val().trim();
-        startDateFormatted = moment(startDate, dateFormat);
+        var startDateFormatted = moment(startDate, dateFormat);
         var monthlyRate = $("#rate-input").val().trim();
 
         
