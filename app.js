@@ -29,13 +29,18 @@ $(document).ready(function () {
     $("#add-employee-record").on("click", function () {
 
         event.preventDefault();
-
+        var dateFormat = "MM/DD/YYYY";
         var name = $("#name-input").val().trim();
         var role = $("#role-input").val().trim();
         var startDate = $("#start-input").val().trim();
+        startDateFormatted = moment(startDate, dateFormat);
         var monthlyRate = $("#rate-input").val().trim();
-        var totalBilled = 1000;
-        var totalMonths = 1000;
+
+        
+        var totalMonths = moment().diff(startDateFormatted, "months");
+        var totalBilled = totalMonths * monthlyRate;
+        console.log("total months", totalMonths);
+        console.log("total billed", totalBilled);
 
         database.ref().push({
             name: name,
